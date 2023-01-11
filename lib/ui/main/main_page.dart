@@ -16,37 +16,6 @@ class MainPage extends GetView<MainController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: Drawer(
-        child: ListView(
-          children: [
-            AspectRatio(
-              aspectRatio: 1,
-              child: Container(
-                color: Colors.blue,
-                child: const Center(
-                  child: Text(
-                    "NFT Lombard",
-                    style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 24,
-                        fontWeight: FontWeight.w600),
-                  ),
-                ),
-              ),
-            ),
-            ListTile(
-              title: const Text("Mijozlar"),
-              onTap: () {
-                Get.back();
-                Get.to(ClientsPage(), binding: ClientsBinding());
-              },
-            ),
-            const Divider(
-              height: 1,
-            ),
-          ],
-        ),
-      ),
       appBar: AppBar(
         title: const Text("NFT Lombard"),
       ),
