@@ -9,7 +9,9 @@ import 'package:lombard/utils/utils.dart';
 import 'package:money_input_formatter/money_input_formatter.dart';
 
 class EditProductPage extends GetView<EditProductController> {
-  EditProductPage({Key? key, required this.clientTableData, this.productTableData}) : super(key: key);
+  EditProductPage(
+      {Key? key, required this.clientTableData, this.productTableData})
+      : super(key: key);
   ClientTableData clientTableData;
   ProductTableData? productTableData;
 
@@ -62,7 +64,9 @@ class EditProductPage extends GetView<EditProductController> {
               final r = await showDatePicker(
                 context: context,
                 initialDate: controller.startDate.value ==
-                    DateTime.fromMillisecondsSinceEpoch(0)?DateTime.now():controller.startDate.value,
+                        DateTime.fromMillisecondsSinceEpoch(0)
+                    ? DateTime.now()
+                    : controller.startDate.value,
                 firstDate: DateTime.now(),
                 lastDate: DateTime.fromMillisecondsSinceEpoch(endDate),
               );
@@ -110,8 +114,10 @@ class EditProductPage extends GetView<EditProductController> {
                   12 * 30 * 24 * 60 * 60 * 1000;
               final r = await showDatePicker(
                 context: context,
-                initialDate:  controller.endDate.value ==
-                    DateTime.fromMillisecondsSinceEpoch(0)?DateTime.now():controller.endDate.value,
+                initialDate: controller.endDate.value ==
+                        DateTime.fromMillisecondsSinceEpoch(0)
+                    ? DateTime.now()
+                    : controller.endDate.value,
                 firstDate: DateTime.now(),
                 lastDate: DateTime.fromMillisecondsSinceEpoch(endDate),
               );
@@ -152,6 +158,12 @@ class EditProductPage extends GetView<EditProductController> {
             ),
           ),
           getDivider(),
+          Center(child: Obx(() {
+            return Text(
+              "Foiz: ${controller.percent.value.toInt()} %",
+              style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
+            );
+          })),
           Obx(
             () => Slider(
               label: "${controller.percent.value.toInt()} %",
@@ -164,12 +176,6 @@ class EditProductPage extends GetView<EditProductController> {
               divisions: 100,
             ),
           ),
-          Center(child: Obx(() {
-            return Text(
-              "Foiz: ${controller.percent.value.toInt()} %",
-              style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
-            );
-          })),
           getDivider(),
           Center(
             child: Obx(
