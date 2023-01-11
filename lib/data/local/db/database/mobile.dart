@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:drift/drift.dart';
 import 'package:drift/native.dart';
+import 'package:get/get.dart';
 import 'package:lombard/data/local/db/app_database.dart';
 import 'package:path/path.dart' as p;
 import 'package:path_provider/path_provider.dart' as paths;
@@ -24,6 +25,7 @@ AppDatabase constructDb({bool logStatements = true, String? path}) {
   }
   if (Platform.isMacOS || Platform.isLinux) {
     final file = File('db.sqlite');
+    Get.printInfo(info: "Db location ${file.absolute}");
     return AppDatabase(
       NativeDatabase(
         file,

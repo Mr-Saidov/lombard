@@ -162,6 +162,7 @@ class MainPage extends GetView<MainController> {
               onPressed: () {
                 Get.back();
                 controller.deleteClient(item.id!);
+                controller.deleteProductByClientId(item.id!);
               },
               child: const Text("O'chirish"),
             ),

@@ -9,4 +9,8 @@ class MainController extends GetxController {
   void deleteClient(int id) {
     _appDatabase.deleteClient(id);
   }
+
+  void deleteProductByClientId(int i) {
+    _appDatabase.deleteProductByClientId(i);
+  }
 }

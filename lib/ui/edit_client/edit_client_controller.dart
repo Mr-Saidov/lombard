@@ -17,10 +17,10 @@ class EditClientController extends GetxController {
   }
 
   checkReady() {
-    isReadyToSave.value = !(nameController.text.toString().isEmpty ||
-        surnameController.text.isEmpty ||
-        middleNameController.text.isEmpty ||
-        pinflController.text.isEmpty);
+    isReadyToSave.value = !(nameController.text.trim().toString().isEmpty ||
+        surnameController.text.trim().isEmpty ||
+        middleNameController.text.trim().isEmpty ||
+        pinflController.text.trim().isEmpty);
   }
 
   saveClient() => appDatabase.insertClient(
