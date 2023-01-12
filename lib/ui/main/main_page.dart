@@ -2,8 +2,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:lombard/data/local/db/app_database.dart';
-import 'package:lombard/ui/clients/clients_binding.dart';
-import 'package:lombard/ui/clients/clients_page.dart';
 import 'package:lombard/ui/edit_client/edit_client_binding.dart';
 import 'package:lombard/ui/edit_client/edit_client_page.dart';
 import 'package:lombard/ui/main/main_controller.dart';
@@ -46,6 +44,7 @@ class MainPage extends GetView<MainController> {
                         builder: (context) => AlertDialog(
                           title: Text(
                             "${item.surname} ${item.name} ${item.middlename}",
+                            textAlign: TextAlign.center,
                           ),
                           actions: [
                             OutlinedButton(
@@ -55,6 +54,7 @@ class MainPage extends GetView<MainController> {
                               },
                             )
                           ],
+                          contentPadding: EdgeInsets.zero,
                           content: Column(
                             mainAxisSize: MainAxisSize.min,
                             children: [

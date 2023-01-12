@@ -26,10 +26,10 @@ class EditClientController extends GetxController {
   saveClient() => appDatabase.insertClient(
         ClientTableData(
           id: clientTableData?.id,
-          name: nameController.text,
-          middlename: middleNameController.text,
-          pinfl: pinflController.text,
-          surname: surnameController.text,
+          name: nameController.text.trim(),
+          middlename: middleNameController.text.trim(),
+          pinfl: pinflController.text.trim(),
+          surname: surnameController.text.trim(),
         ),
       );
 

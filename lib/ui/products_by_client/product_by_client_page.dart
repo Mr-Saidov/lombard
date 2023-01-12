@@ -72,6 +72,7 @@ class ProductByClientPage extends GetView<ProductByClientController> {
                         builder: (context) => AlertDialog(
                           title: Text(
                             "${item.name}",
+                            textAlign: TextAlign.center,
                           ),
                           actions: [
                             OutlinedButton(
@@ -105,12 +106,12 @@ class ProductByClientPage extends GetView<ProductByClientController> {
                           content: Column(
                             mainAxisSize: MainAxisSize.min,
                             children: [
-                              SizedBox(
+                              const SizedBox(
                                 height: 12,
                               ),
                               ListTile(
                                 title: Text(
-                                  "Berilgan pul ${currencyFormatter(double.parse(item.gaveMoney!.replaceAll(" ", "")))}",
+                                  "Berilgan pul: ${currencyFormatter(double.parse(item.gaveMoney!.replaceAll(" ", "")))}",
                                 ),
                               ),
                               ListTile(
@@ -124,11 +125,11 @@ class ProductByClientPage extends GetView<ProductByClientController> {
                                 ),
                               ),
                               ListTile(
-                                title: Text("Foiz ${item.percent} %"),
+                                title: Text("Foiz: ${item.percent} %"),
                               ),
                               ListTile(
                                 title: Text(
-                                    "Qaytariladigan pul ${currencyFormatter((item.percent! + 100) / 100 * double.parse(item.gaveMoney!.replaceAll(" ", "")))}"),
+                                    "Qaytariladigan pul: ${currencyFormatter((item.percent! + 100) / 100 * double.parse(item.gaveMoney!.replaceAll(" ", "")))}"),
                               ),
                             ],
                           ),

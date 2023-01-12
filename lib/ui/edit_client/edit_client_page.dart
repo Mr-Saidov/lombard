@@ -25,6 +25,7 @@ class EditClientPage extends GetView<EditClientController> {
             controller: controller.surnameController,
             onChanged: (a) => controller.checkReady(),
             maxLines: 1,
+            autofocus: true,
             inputFormatters: [LengthLimitingTextInputFormatter(50)],
             decoration: InputDecoration(
               hintText: "Familiyasi",
@@ -32,6 +33,7 @@ class EditClientPage extends GetView<EditClientController> {
                 borderRadius: BorderRadius.circular(12),
               ),
             ),
+            textInputAction: TextInputAction.next,
           ),
           SizedBox(height: 4),
           TextField(
@@ -45,6 +47,7 @@ class EditClientPage extends GetView<EditClientController> {
                 borderRadius: BorderRadius.circular(12),
               ),
             ),
+            textInputAction: TextInputAction.next,
           ),
           const SizedBox(height: 4),
           TextField(
@@ -52,6 +55,7 @@ class EditClientPage extends GetView<EditClientController> {
             onChanged: (a) => controller.checkReady(),
             maxLines: 1,
             inputFormatters: [LengthLimitingTextInputFormatter(50)],
+            textInputAction: TextInputAction.next,
             decoration: InputDecoration(
               hintText: "Otasining ismi",
               border: OutlineInputBorder(

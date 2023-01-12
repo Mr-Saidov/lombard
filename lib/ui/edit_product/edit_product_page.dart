@@ -32,7 +32,9 @@ class EditProductPage extends GetView<EditProductController> {
           TextField(
             controller: controller.nameController,
             onChanged: (a) => controller.checkReady(),
+            textInputAction: TextInputAction.next,
             maxLines: 1,
+            autofocus: true,
             inputFormatters: [LengthLimitingTextInputFormatter(50)],
             decoration: InputDecoration(
               hintText: "Tovar nomi",
@@ -45,6 +47,7 @@ class EditProductPage extends GetView<EditProductController> {
           TextField(
             controller: controller.gaveMoneyController,
             onChanged: (a) => controller.checkReady(),
+            textInputAction: TextInputAction.next,
             maxLines: 1,
             inputFormatters: [MoneyInputFormatter()],
             keyboardType: const TextInputType.numberWithOptions(decimal: true),

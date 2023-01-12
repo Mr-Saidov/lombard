@@ -24,10 +24,10 @@ class EditProductController extends GetxController {
   Future saveProduct() async => appDatabase.insertProduct(
         ProductTableData(
             id: productTableData?.id,
-            name: nameController.text,
+            name: nameController.text.trim(),
             clientId: clientTableData.id,
             percent: percent.value.toInt(),
-            gaveMoney: gaveMoneyController.text,
+            gaveMoney: gaveMoneyController.text.trim(),
             startDate: startDate.value,
             endDate: endDate.value),
       );
