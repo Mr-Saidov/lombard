@@ -37,7 +37,7 @@ class EditProductPage extends GetView<EditProductController> {
             autofocus: true,
             inputFormatters: [LengthLimitingTextInputFormatter(50)],
             decoration: InputDecoration(
-              hintText: "Tovar nomi",
+              labelText: "Tovar nomi",
               border: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(12),
               ),
@@ -52,7 +52,7 @@ class EditProductPage extends GetView<EditProductController> {
             inputFormatters: [MoneyInputFormatter()],
             keyboardType: const TextInputType.numberWithOptions(decimal: true),
             decoration: InputDecoration(
-              hintText: "Beriladigan summa",
+              labelText: "Beriladigan summa",
               border: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(12),
               ),

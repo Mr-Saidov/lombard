@@ -28,7 +28,7 @@ class EditClientPage extends GetView<EditClientController> {
             autofocus: true,
             inputFormatters: [LengthLimitingTextInputFormatter(50)],
             decoration: InputDecoration(
-              hintText: "Familiyasi",
+              labelText: "Familiyasi",
               border: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(12),
               ),
@@ -42,7 +42,7 @@ class EditClientPage extends GetView<EditClientController> {
             maxLines: 1,
             inputFormatters: [LengthLimitingTextInputFormatter(50)],
             decoration: InputDecoration(
-              hintText: "Ismi",
+              labelText: "Ismi",
               border: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(12),
               ),
@@ -57,7 +57,7 @@ class EditClientPage extends GetView<EditClientController> {
             inputFormatters: [LengthLimitingTextInputFormatter(50)],
             textInputAction: TextInputAction.next,
             decoration: InputDecoration(
-              hintText: "Otasining ismi",
+              labelText: "Otasining ismi",
               border: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(12),
               ),
@@ -70,7 +70,7 @@ class EditClientPage extends GetView<EditClientController> {
             maxLines: 1,
             inputFormatters: [LengthLimitingTextInputFormatter(9)],
             decoration: InputDecoration(
-              hintText: "Passport ma'lumotlari (JSHSHIR)",
+              labelText: "Passport ma'lumotlari (JSHSHIR)",
               border: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(12),
               ),
